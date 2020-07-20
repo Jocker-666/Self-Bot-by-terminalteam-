@@ -1,4 +1,5 @@
 import discord
+import config
 from discord.ext import commands
 
 client = commands.Bot(command_prefix = '/', self_bot = True)
@@ -28,3 +29,5 @@ async def helpselfbot(ctx):
     embed.set_thumbnail(url = "https://sirarcher1.s-ul.eu/rlNVXdGf?thumb=1")
     
     await ctx.send(embed=embed)
+
+run(config.SELFTOKEN, bot = False)
